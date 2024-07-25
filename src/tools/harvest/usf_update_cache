@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /data/gandalf/gandalf_configs/cache
+rsync -av gcoos@usfgliderserver.marine.usf.edu:/var/opt/sfmc-dataserver/stations/default/dataFiles/cache/* .
+
+

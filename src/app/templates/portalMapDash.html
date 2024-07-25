@@ -1,0 +1,29 @@
+<script>updateSummary()</script>
+ <table class="table table-hover table-striped table-bordered">
+      <th class='th_dash'>P.I.</th>
+      <th class='th_dash'>Vehicle</th>
+      <th class='th_dash'>Type</th>
+      <th class='th_dash'>Operator</th>
+      <th class='th_dash'>Project</th>
+      <th class='th_dash'>Deployed</th>
+      <th class='th_dash'>Recovered</th>
+      <th class='th_dash'>Days Wet</th>
+      <th class='th_dash'>Distance (km)</th>
+      <th class='th_dash'>Data</th>
+      <th class='th_dash'>KMZ</th>
+      <th class='th_dash'>Plots</th>
+      <tr>
+        <td class='td_dash'> {{dashboard_json.pi}} </td>
+        <td class='td_dash'> {{dashboard_json.vehicle}} </td>
+        <td class='td_dash'> {{dashboard_json.type}} </td>
+        <td class='td_dash'> {{dashboard_json.operator}} </td>
+        <td class='td_dash'> {{dashboard_json.project}} </td>
+        <td class='td_dash'> {{dashboard_json.deployed}} </td>
+        <td class='td_dash'> {{dashboard_json.recovered}} </td>
+        <td class='td_dash'> {{dashboard_json.days_wet}} </td>
+        <td class='td_dash'> {{dashboard_json.distance}} </td>
+        <td class='td_dash'> <a href="{{dashboard_json.data_url}}"><img src="{{ request.url_root }}/static/images/chart_icon.png"></a></td>
+        <td class='td_dash'> <a href="{{dashboard_json.kmz_url}}"><img src="{{ request.url_root }}/static/images/kml_icon.jpg"></td>
+        <td class='td_dash'> <a href="{{dashboard_json.plot_url}}"><img src="{{ request.url_root }}/static/images/plot_icon.png">
+      </tr>
+    </table>

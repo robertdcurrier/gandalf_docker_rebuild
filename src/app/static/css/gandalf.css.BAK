@@ -1,0 +1,501 @@
+/*** Team Members ***/
+.team-member-caption {
+        font-family: 'Montserrat',sans-serif;
+        font-size: 20px;
+        width: 100%;
+        height: 25px;
+        background: white;
+        font-color: gray;
+        text-align: center;
+}
+
+.team-member-caption-sub {
+        font-size: 14px;
+}
+.team-member-box {
+        width: 250px;
+        height: 280px;
+        overflow: hidden;
+        text-align: center;
+        float: left;
+        margin: 20px;
+        color: black;
+        font: 14px;
+}
+.team-member-box img {
+        max-width: 90%;
+        max-height: 90%;
+}
+.team-member span {
+        font: 14px;
+        color: blue;
+        font-style: bold;
+}
+
+/*** End Team ***/
+#map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+#new-dash {
+  font-family: "Montserrat";
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  z-index: 5000;
+  font-size: 1em;
+  color: black;
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+#gLayers {
+  display: none;
+  position: fixed;
+  background-color: transparent;
+  top: 50px;
+  right: 0px;
+  color: black;
+  overflow-y: scroll;
+  height: 90%;
+  z-index: 5001;
+}
+
+
+html, body {
+  height: 100%;
+  height: 100%;
+}
+
+.subtitle {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: -1px;
+  color: white;
+}
+
+#subtitle {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  padding-top: 0px;
+}
+
+.logo{
+  width:130px;
+  margin:0 auto 35px;
+}
+
+body {
+        padding-top: 50px;
+}
+
+th {
+ text-align: center;
+}
+.login-title{
+  font: Arial;
+  font-size: 4em;
+  color: black;
+}
+
+.delete-title{
+  font: Arial;
+  font-size: 2em;
+  color: red;
+}
+
+.login-submit {
+  font-family: Arial;
+  font-size: 2em;
+  border: 1px solid green;
+  width: 350px;
+  height: 50px;
+  color: white;
+  background-color: red;
+  border-radius: 50px;
+}
+
+.delete-submit {
+  font-family: Arial;
+  font-size: 2em;
+  border: 1px solid green;
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: blue;
+  border-radius: 50px;
+  bottom: 10px;
+}
+
+.login-screen {
+  background-color: #FFFFFF;
+  font-family: Arial;
+  padding: 50px;
+  height: 100%;
+  text-align: center;
+}
+
+.delete-screen {
+  border: 1px solid green;
+  background-color: #FFFFFF;
+  font-family: Arial;
+  padding: 10px;
+  height: 100%;
+  text-align: center;
+}
+
+.login-field {
+  height: 50px;
+  width: 400px;
+  color: #777;
+  font: Arial;
+  font-size: 1em;
+  background-color: #DDD;
+  margin: 20px;
+ }
+
+.login-box {
+  border: 2px solid black;
+  width: 500px;
+  height:350px;
+  color: red;
+  border-radius: 5px;
+  background-color: white;
+  margin: 20px auto;
+}
+
+.btn-danger {
+  font: Montserrat;
+  position: absolute;
+  bottom: 5px;
+  margin-left: 38%;
+}
+
+.delete-box {
+  font: Montserat;
+  font-size: 1.5em;
+  border: 2px solid red;
+  width: 400px;
+  height: 400px;
+  color: #777;
+  border-radius: 5px;
+  background-color: white;
+  margin: 10px auto;
+  position: relative;
+}
+
+.success-box {
+  text-align: center;
+  border: 2px solid black;
+  width: 800px;
+  height:1200px;
+  color: #777;
+  border-radius: 5px;
+  background-color: white;
+  margin: 20px auto;
+}
+
+.jumbotron{
+  text-align: center;
+  height: 100%;
+}
+.jumbotron h2{
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.table-wrapper {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 200;
+  text-align: left;
+  background-color: #fff;
+}
+
+/*** Bootstrap overrides ***/
+.navbar-fixed-top {
+  z-index: 5000
+  color: white;
+}
+
+.navbar .navbar-nav .navbar-right {
+padding-right: 50px;
+margin-right: -40px;
+}
+
+.navbar-default .navbar-right > li > a {
+  color: white;
+  margin-right: 10px;
+}
+
+.gMenu {
+  font-size: 1em;
+  color: red;
+}
+
+.navbar-inverse {
+
+  margin-bottom: 0px;
+  padding-right: 5px;
+}
+
+.button-spacer {
+  width: 100%;
+  height: 75px;
+  background-color: white;
+  }
+
+.btn.btn-default.btn-return {
+        width: 80%
+        height: 75px;
+        font: 2em;
+        color: blue;
+        background: white;
+}
+.btn.btn-primary {
+  font-family: "Montserrat";
+  font-size: 6em;
+  color: white;
+  background-color: blue;
+  width: 100%;
+}
+.file-upload-box  {
+margin-top: 5px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+border-radius: 10px;
+font-family: "Montserrat";
+}
+
+label.btn.btn-default.btn-file {
+  margin: 20px;
+  margin-bottom: 20px;
+  color: black;
+  background-color: #eeeeee;
+  font-family: "Montserrat";
+  font-size: 1.4em;
+  width: 60%;
+  height: 50px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #888888;
+  overflow: hidden;
+}
+
+.error_mess {
+  font-family: "Montserat";
+  color: red;
+  font-size: 2.0em;
+  text-align: center;
+  font-weight: bold;
+}
+.success_mess {
+  font-family: "Montserat";
+  color: red;
+  font-size: 6.0em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.sample_id {
+  font-family: "Montserat";
+  color: black;
+  font-size: 4.0em;
+  text-align: center;
+  font-weight: italic;
+}
+
+.return_mess {
+  margin: 20px;
+  font-family: "Montserat";
+  color: blue;
+  font-size: 8.0em;
+  text-align: center;
+  font-weight: italic;
+}
+
+.locationBox {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  width: 45%;
+  height: 100%;
+  font-family: "Montserat";
+  color: green;
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+.dropdown {
+  font-family: "Montserat";
+  font-size: 1em;
+  font-weight: bold;
+  }
+
+.dropdown-header {
+  font-family: "Montserat";
+  font-size: 24px;
+  font-weight: bold;
+}
+.dropdown-menu {
+        color: red;
+}
+.dropdown-menu-ipod {
+  font-family: "Montserat";
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.table-wrapper {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 200;
+  text-align: left;
+  background-color: #fff;
+}
+
+.video {
+  width: 100%;
+  height: 100%
+  background-color: #eee;
+}
+
+.contentTitle {
+  width:  100%;
+  text-align: center;
+  height: 25px;
+  background-color: rgb(0,0,100);
+  color: white;
+  font-size: 1.2em;
+}
+.td_dash {
+    text-align: center;
+    font-size: .8em;
+    background-color: rgb(253,245,230);
+    border: 1px solid black;
+}
+.th_dash {
+    text-align: center;
+    border: 1px solid black;
+    color: #ffffff;
+    padding: 5px;
+    background-color: #3399ff;
+    font-size: .9em;
+}
+.td_good_date {
+  text-align: center;
+  background-color: #66FF33;
+  color: black;
+  border: 1px solid black;
+  font-size: .8em;
+}
+.td_warn_date {
+  text-align: center;
+  background-color: #FFA500;
+  color: black;
+  border: 1px solid black;
+  font-size: .8em;
+}
+.td_alert_date {
+  text-align: center;
+  background-color: #FFFF00;
+  color: black;
+  border: 1px solid black;
+  font-size: .8em;
+}
+.td_crit_date {
+  text-align: center;
+  background-color: #FF0000;
+  color: black;
+  border: 1px solid black;
+  font-size: .8em;
+}
+.iconColorGreen {background-color: white; color: green; border: 0px; text-align: center;}
+.iconColorRed {background-color: white; color: red; border: 0px; text-align: center;}
+.iconColorRed > a:link {color:#FF0000;}
+.iconColorRed > a:visited {color:#FF0000;}
+.iconColorGreen > a:link {color:#00FF00;}
+.iconColorGreen > a:visited {color:#00FF00;}
+.iconColorOrange {background-color: white; color: orange;}
+.iconImage {
+  width: 25px;
+  height: 25px;
+}
+
+.leaflet-popup {
+  width: 300px;
+}
+
+.infoBoxHeading {
+ font-size: 1.5em;
+ font-weight: 800;
+ text-align: center;
+ }
+
+.infoBoxSubtitle {
+  font-size: .85em;
+  font-weight: 900;
+  text-align: center;
+}
+
+.infoBoxTable {
+  border: 0px solid black;
+  margin: 0 auto;
+  background-color: white;
+  width: 100%;
+  font-family: "Montserrat";
+}
+
+.td_infoBoxSensor {
+  font-style: bold;
+  border: 0px solid red;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
+  width: 40%;
+  text-align: left;
+  padding-right: 5px;
+}
+
+.td_infoBoxData {
+  font-style: bold;
+  border: 0px solid red;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  font-weight: 400;
+  width: 60%;
+  text-align: left;
+  padding-right: 5px;
+}
+#about_div {
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+}
+
+/*** My navbar overrides ***/
+#navbar_nav > li > a{
+  color: white;
+  font-size: 14px;
+}
+
+#navbar_nav > li > a:hover {color:#00FF00};
+
+.navbar-brand {
+  border: 1px solid red;
+  padding-top: 1px;
+  margin-top: 0px;
+  margin-left: 2px;
+  padding-left: 0px;
+  padding-right: 0 px;
+  margin-right: 0px;
+}
+

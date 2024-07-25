@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+{% include 'publicNav.html' %}
+<div id="about_div">
+<h1>About the GANDALF model layers</h1>
+<p><b>HYCOM Overview</b></p>
+<i>The HYCOM layer is sourced from https://wms.hycom.org/thredds/wms/GLBy0.08/latest</i></p>
+<p>The HYCOM consortium is a multi-institutional effort sponsored by the
+  National Ocean Partnership Program (NOPP), as part of the U. S. Global Ocean
+  Data Assimilation Experiment (GODAE), to develop and evaluate a
+  data-assimilative hybrid isopycnal-sigma-pressure (generalized) coordinate
+  ocean model (called HYbrid Coordinate Ocean Model or HYCOM). The GODAE
+  objectives of three-dimensional depiction of the ocean state at fine
+  resolution in real time, provision of boundary conditions for coastal and
+  regional models, and provision of oceanic boundary conditions for a global
+  coupled ocean-atmosphere prediction model, are being addressed by a
+  partnership of institutions that represent a broad spectrum of the
+  oceanographic community.</p>
+
+<p><b>AOML Geostrophic Overview</b></p>
+<i>The AOML layer is sourced from https://cwcgom.aoml.noaa.gov/thredds/wms/OCEAN_GEOSTROPHIC_CURRENTS/CURRENTS.nc</i></p>
+<p>The products in this layer were created using altimetry observations and
+   include fields of geostrophic currents, sea height anomaly (SHA) and sea
+   height (SH) for the Gulf of Mexico region. SHA data is obtained from a
+   suit of different satellites.</p>
+<p>Maps of sea level obtained from satellite altimetry measurements are
+   used to derive surface ocean currents (top map). Higher values of sea level
+    (oranges and reds) are associated with the Loop Current and warm eddies,
+    while lower values are associated to colder features. Drifter trajectories
+    (lines in the top map) are used as an independent measurement to better
+     illustrate circulation features. Sea height anomaly maps
+     show the difference of sea level from average conditions, while sea height
+      maps show absolute values of the sea level. Decision makers, managers,
+      and scientists use these products to determine the flow of the surface
+      water in the Gulf of Mexico.</p>
+</div>
+{% endblock %}

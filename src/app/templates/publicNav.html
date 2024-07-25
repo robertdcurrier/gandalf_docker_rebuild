@@ -1,0 +1,60 @@
+<nav id="nav_bar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="http://products.gcoos.org">
+      <img src='/static/images/gcoos-logo.png'></>
+    </a>
+  </div>
+  <div class="collapse navbar-collapse" id="myNavBar">
+    <ul id="navbar_nav" class="nav navbar-nav">
+      <li><a href="{{ request.url_root }}">Deployments</a></li>
+      <li><a href="{{ request.url_root }}portal">Data Portal</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">About
+          <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ request.url_root }}about/gandalf">GANDALF</a></li>
+          <li><a href="{{ request.url_root }}about/navigation">Navigation</a></li>
+          <li><a href="{{ request.url_root }}about/models">Models</a></li>
+          <li><a href="{{ request.url_root }}about/satellites">Satellites and Imagery</a></li>
+        </ul>
+      </li>
+      <li><a href="{{ request.url_root }}team">Team</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">AIS
+          <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" id="ais-fleet">Research Fleet</a></li>
+        </ul>
+      </li>
+      {% if request.path == "/" %}
+      <li><a href="#" id="dash-button"><i class="fas fa-plane"></i>
+          Dashboard</a></li>
+        {% endif %}
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+	<script>
+	console.log('MAGIC HERE BRAH');
+        // Embed the user information as a JavaScript variable
+		console.log({{user}});
+    </script>	   
+       {% if current_user.is_authenticated %}
+       <li class="dropdown">
+         <a href="{{request.script_root}}/" data-toggle="dropdown"
+          class="dropdown-toggle">{{ current_user.id }}
+           <b class="caret"></b></a>
+           <ul class="dropdown-menu">
+             <li><a href="{{request.script_root}}/logout">Sign Out</a></li>
+           </ul>
+         </li>
+         {% else %}
+         <li><a href="{{ request.script_root }}/login">Sign In</a></li>
+       </ul>
+       {% endif %}
+     </div>
+ </nav>

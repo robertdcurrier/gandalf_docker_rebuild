@@ -1,0 +1,20 @@
+2023-08-22 15:22:52 ERROR DatasetConfig:232 - uk.ac.rdg.resc.edal.exceptions.EdalException loading metadata for dataset RTOFS
+uk.ac.rdg.resc.edal.exceptions.EdalException: Problem creating dataset RTOFS at /data/gandalf/ncwms/*.nc
+	at uk.ac.rdg.resc.edal.dataset.cdm.CdmDatasetFactory.createDataset(CdmDatasetFactory.java:115)
+	at uk.ac.rdg.resc.edal.dataset.cdm.CdmDatasetFactory.createDataset(CdmDatasetFactory.java:68)
+	at uk.ac.rdg.resc.edal.catalogue.jaxb.DatasetConfig.createDataset(DatasetConfig.java:254)
+	at uk.ac.rdg.resc.edal.catalogue.jaxb.DatasetConfig.refresh(DatasetConfig.java:213)
+	at uk.ac.rdg.resc.edal.catalogue.jaxb.CatalogueConfig$1.run(CatalogueConfig.java:154)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: uk.ac.rdg.resc.edal.exceptions.EdalException: The location /data/gandalf/ncwms/*.nc doesn't refer to any existing files.
+	at uk.ac.rdg.resc.edal.dataset.cdm.NetcdfDatasetAggregator.getDataset(NetcdfDatasetAggregator.java:213)
+	at uk.ac.rdg.resc.edal.dataset.cdm.CdmDatasetFactory.getNetcdfDatasetFromLocation(CdmDatasetFactory.java:123)
+	at uk.ac.rdg.resc.edal.dataset.cdm.CdmDatasetFactory.createDataset(CdmDatasetFactory.java:83)
+	... 11 more
+2023-08-22 15:22:52 INFO  ConfigServlet:90 - No godiva3.properties file found.  Defaults will be used.

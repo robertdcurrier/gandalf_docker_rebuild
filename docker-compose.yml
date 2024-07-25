@@ -1,0 +1,25 @@
+services:  
+  web:
+    image: gandalf_web
+    container_name: gandalf_web
+    command: "/usr/sbin/apachectl -k start -D FOREGROUND"
+    cpuset: "0"
+    volumes:
+      - ./src/app:/var/www/wsgi/gandalf/app
+      - ./data/gandalf:/data/gandalf
+      - /etc/letsencrypt:/etc/letsencrypt
+    ports:
+      - "80:80"
+      - "443:443"
+    working_dir: /var/www/wsgi/gandalf/app
+  
+  
+  tools:
+    image: gandalf_tools
+    command: tail -f /dev/null
+    container_name: gandalf_tools
+    restart: "always"
+    volumes:
+      - ./src/tools:/gandalf/tools
+      - ./data/gandalf:/data/gandalf
+    working_dir: /gandalf/tools

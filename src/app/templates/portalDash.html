@@ -1,0 +1,35 @@
+ <script>updateSummary()</script>
+ <div class="dataPortal">
+ <table class="table table-hover table-striped table-bordered">
+      <th class='th_dash'>P.I.</th>
+      <th class='th_dash'>Vehicle</th>
+      <th class='th_dash'>Type</th>
+      <th class='th_dash'>Operator</th>
+      <th class='th_dash'>Project</th>
+      <th class='th_dash'>Deployed</th>
+      <th class='th_dash'>Recovered</th>
+      <th class='th_dash'>Days Wet</th>
+      <th class='th_dash'>Distance (km)</th>
+      <th class='th_dash'>Map</th>
+      <th class='th_dash'>Data</th>
+      <th class='th_dash'>KMZ</th>
+      <th class='th_dash'>Plots</th>
+    {% for deployment in summaries %}
+      <tr class='tr_dash'>
+        <td class='td_dash'> {{deployment.pi}} </td>
+        <td class='td_dash'> {{deployment.vehicle}} </td>
+        <td class='td_dash'> {{deployment.type}} </td>
+        <td class='td_dash'> {{deployment.operator}} </td>
+        <td class='td_dash'> {{deployment.project}} </td>
+        <td class='td_dash'> {{deployment.deployed}} </td>
+        <td class='td_dash'> {{deployment.recovered}} </td>
+        <td class='td_dash'> {{deployment.days_wet}} </td>
+        <td class='td_dash'> {{deployment.distance}} </td>
+        <td class='td_dash'><a href = "/portal/map{{ deployment.map_url }}"><i class="fa-solid fa-chart-scatter"></i></td>
+        <td class='td_dash'><a href="{{ deployment.data_url }}"><img src="{{ request.url_root }}/static/images/chart_icon.png"></a></td>
+        <td class='td_dash'><a href="{{ deployment.kmz_url }}"><img src="{{ request.url_root }}/static/images/kml_icon.jpg"></a></td>
+        <td class='td_dash'><a href="{{ deployment.plot_url }}"><img src="{{ request.url_root }}/static/images/plot_icon.png"></a></td>
+      </tr>
+    {% endfor %}
+    </table>
+ </div>

@@ -1,0 +1,1 @@
+db.users.insert({"user_name" : "Bob Currier", "user_email" : "robertdcurrier@gmail.com", "user_phone" : "13524761436", "user_org" : "GCOOS", "user_role" : "admin", "user_project" : "gandalf", "map_center" : [-90, 33], "map_zoom" : 5, "user_pw" : "9a87c31ebc291fdc8bb5520db2f10dd2"});

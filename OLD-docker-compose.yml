@@ -1,0 +1,60 @@
+version: "3.3"
+services:  
+  web:
+    image: gandalf
+    container_name: web
+    command: "/usr/sbin/apachectl -k start -D FOREGROUND"
+    cpuset: "0"
+    volumes:
+      - ./src/app:/var/www/wsgi/gandalf/app
+      - /data/gandalf:/data/gandalf
+      - /etc/letsencrypt:/etc/letsencrypt
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - mongo
+    working_dir: /var/www/wsgi/gandalf/app
+  
+  tools:
+    image: gandalf
+    command: tail -f /dev/null
+    container_name: tools
+    restart: "always"
+    volumes:
+      - ./src/tools:/gandalf/tools
+      - /data/gandalf:/data/gandalf
+    working_dir: /gandalf/tools
+
+  gncutils:
+    image: robertdcurrier/ubuntu_gncutils_2023
+    container_name: gncutils
+    restart: "always"
+    command: tail -f /dev/null
+    volumes:
+      - ./src/tools:/gandalf/tools
+      - /data/gandalf:/data/gandalf
+
+  mongo:
+    image: mongo:4.2.21
+    container_name: mongo
+    restart: "always"
+    volumes:
+    - /data/db:/data/db
+    - /data/dumps:/data/dumps
+    - /data/backups/databases:/data/backups/databases
+  
+  ncwms:
+    image: robertdcurrier/ncwms2-gandalf
+    container_name: ncwms
+    restart: "always"
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    volumes:
+     - /data/gandalf:/data/gandalf
+     - /etc/letsencrypt:/etc/letsencrypt
+     - ./server.xml:/usr/local/tomcat/conf/server.xml
+     - ./configs/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+     - ./configs/config.xml:/root/.ncWMS2/config.xml
+

@@ -1,0 +1,48 @@
+<table class='table'>
+    <th class='th_dash'>P.I.</th>
+    <th class='th_dash'>Vehicle Name</th>
+    <th class='th_dash'>Type</th>
+    <th class='th_dash'>Status</th>
+    <th class='th_dash'>Data Source</th>
+    <th class='th_dash'>Operator</th>
+    <th class='th_dash'>Project</th>
+    <th class='th_dash'>Deployed</th>
+    <th class='th_dash'>Days Wet</th>
+    <th class='th_dash'>Last Report</th>
+    <th class='th_dash'>Teleport</th>
+    <th class='th_dash'>Science Plots</th>
+    <th class='th_dash'>KMZ</th>
+    {% autoescape on %}
+    {% for vehicle in vehicles %}
+    <tr>
+      <td class='td_dash'>{{vehicle.PI}}</td>
+      <td class='td_dash'>{{vehicle.public_name}}</td>
+      <td class='td_dash'>{{vehicle.vehicle_type}}</td>
+      <td class='td_dash'>{{vehicle.dash_status}}</td>
+      <td class='td_dash'>{{vehicle.data_source}}</td>
+      <td class='td_dash'>{{vehicle.operator}}</td>
+      <td class='td_dash'>{{vehicle.project}}</td>
+      <td class='td_dash'>{{vehicle.deployment_date}}</td>
+      <td class='td_dash'>{{vehicle.days_wet}}</td>
+      
+      <script>
+	      console.log('DPTCD: ' + {{vehicle.last_call}});
+      </script>
+      {% if vehicle.last_call > 2 %}
+        <td class='td_crit_date'>{{vehicle.last_surfaced}}</td>
+      {% else %}
+        <td class='td_good_date'>{{vehicle.last_surfaced}}</td>
+      {% endif %}
+      <td class='td_dash'><i class="fas fa-search"
+      onclick="teleport('{{vehicle.latitude}}','{{vehicle.longitude}}')"
+      </i></td>
+      <td class='td_dash'>
+        <i class="fas fa-chart-bar"
+          onclick="deployPlots('{{vehicle.vehicle}}')"
+        </i></td>
+      <td class='td_dash'><a href={{vehicle.kmz_url}}>
+        <i class="fas fa-globe"></i></td>
+    </tr>
+    {% endfor %}
+    {% endautoescape %}
+</table>

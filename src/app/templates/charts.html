@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+{% autoescape on %}
+<div id='new-menu'>
+  {% include "gMenu.html" %}
+</div>
+        
+<div id='myCharts'>
+<script>
+data = []
+salinity =  waveglider.properties.salinity;
+length = salinity.length;
+//Convert to floats
+for(index = 0; index < length; index++) {
+        floatEpoch = parseFloat(salinity[index][0]);
+        floatSal = parseFloat(salinity[index][1]);
+        data.push([floatEpoch, floatSal]);
+   }
+drawPlot(data,'Gulf Explorer', 'Salinity');
+</script>
+</div>
+{% endautoescape %}
+{% endblock %}

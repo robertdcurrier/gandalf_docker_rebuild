@@ -1,0 +1,7 @@
+.json
+.pyc
+.mp4
+.nc
+src/tools/tmp/
+build.min.js
+__pycache__

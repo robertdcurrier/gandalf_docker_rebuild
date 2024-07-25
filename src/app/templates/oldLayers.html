@@ -1,0 +1,39 @@
+<span class='list-group-item'>NOAA Charts
+  <input type='range' min='0' max='1' step='.01' value='0'
+   onmousemove="layerOpacity(layersNS.rncLayer,this.value)"></input>
+</span>
+<span class='list-group-item'>GOES East
+    <input type='range' min='0' max='1' step='.01' value='0'
+       onmousemove="layerOpacity(layersNS.goesVisLayer,this.value)"></input>
+</span>
+<span class='list-group-item'>AOML Geostrophic
+    <input  type='range' min='0' max='1' step='.01' value='0' onmousemove="layerOpacity(layersNS.geostrophicLayer,this.value)"></input>
+</span>
+<span class='list-group-item'>HYCOM Opacity
+  <input  type='range' min='0' max='1' step='.01' value='0' onmousemove="layerOpacity(layersNS.hycomLayer,this.value)"></input>
+</span>
+<span class='list-group-item'>HYCOM Depth (m)
+  <div id='depthWindow'></div>
+  <input  type='range' min='0' max='19' step='1' value='0' id='hycomDepth'
+    onchange="layerDepth(this.value)">
+  </input>
+</span>
+<span class='list-group-item'>HF Radar 6K
+  <input  type='range' min='0' max='1' step='.01' value='0' onmousemove="layerOpacity(layersNS.hfrLayer6K,this.value)"></input>
+</span>
+<span class='list-group-item'>HF Radar 1K
+  <input  type='range' min='0' max='1' step='.01' value='0' onmousemove="layerOpacity(layersNS.hfrLayer1K,this.value)"></input>
+</span>
+<span class='list-group-item'>NOAA GIBS Sea Surface Temperature
+  <input type='range' min='0' max='1' step='.01' value='0' onmousemove="layerOpacity(SSTLayer,this.value)"></input>
+</span>
+<span class='list-group-item'>MODIS Aqua Chlorophyll A
+  <input type='range' min='0' max='1' step='.01' value='0' onmousemove="layerOpacity(gibsMODIS1,this.value);
+  layerOpacity(gibsMODIS2,this.value);layerOpacity(gibsMODIS3,this.value)"></input>
+</span>
+<span class='list-group-item'>Shipping Lanes
+  <input  type='range' min='0' max='1' step='.01' value='0' onmousemove="layerOpacity(layersNS.shippingLanes,this.value)"></input>
+</span>
+<span class='list-group-item'>World EEZs
+  <input  type='range' min='0' max='1' step='.01' value='0' onmousemove="layerOpacity(layersNS.eezLayer,this.value)"></input>
+</span>

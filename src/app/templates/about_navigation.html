@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+{% include 'publicNav.html' %}
+<div id="about_div">
+<h1>About the GANDALF navigation layers</h1>
+
+<p>GANDALF, the Gulf AUV Network and Data Archiving Long-term Storage Facility
+(http://gandalf.gcoos.org) was conceived as an aid to AUV pilots operating
+in the Gulf of Mexico.  GANDALF provides real-time vehicle positioning information
+via a maps-based interface with dashboard display, plots of flight and science
+sensors, Google Earth KMZ file generation and access to processed data files.</p>
+
+<p>GANDALF is equipped with numerous layers that can be individually displayed on
+the base map. Each layer’s transparency can be individually adjusted allowing for
+‘mash-ups’ of layers.  Provided layers include CONUS NEXRAD, GOES visible and
+GOES infrared satellite images, sea surface temperature and chlorophyll images
+from the University of South Florida, sea surface heights from CCAR and NOAA
+raster navigational charts.</p>
+
+<p>In addition to the observational layers several model outputs are provided
+including the Naval Research Lab’s ensemble of sea surface
+velocity, sea surface temperature and sea surface elevation.   During a deployment
+NetCDF files are created from uploaded glider data files and uploaded to the IOOS
+Glider DAC.</p>
+
+<p>GANDALF provides post-processing of mission data for AUV operators.
+Binary data files and text log files are downloaded from operator’s servers
+and publication quality plots are generated. Mission files are permanently
+archived on the GANDALF server.</p>
+
+<p>GANDALF provides a valuable service for AUV operators and is particularly useful to
+glider operators that have little or no IT support.  GANDALF services are provided at
+no cost to users: all that is needed is access to glider data files.</p>
+</div>
+{% endblock %}

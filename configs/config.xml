@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <datasets>
+        <dataset id="RTOFS" title="RTOFS" location="/data/gandalf/ncwms/*.nc4" queryable="true" downloadable="false" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="360">
+            <variables>
+                <variable id="salinity" title="Salinity" description="Salinity" palette="seq-BlueHeat" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="30.0 39.48" scaling="linear"/>
+                <variable id="water_temp_bottom" title="Water Temperature" description="Water Temperature" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.4822 35.29" scaling="linear"/>
+                <variable id="water_u_bottom:water_v_bottom-group" title="sea_water_velocity_at_bottom" description="Vector fields for sea_water_velocity_at_bottom" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.03282 0.6893" scaling="linear"/>
+                <variable id="water_u_bottom" title="Eastward Water Velocity" description="Eastward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.465 0.481" scaling="linear"/>
+                <variable id="water_v_bottom" title="Northward Water Velocity" description="Northward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.5243 0.5373" scaling="linear"/>
+                <variable id="water_u_bottom:water_v_bottom-dir" title="Direction of sea water velocity at bottom" description="Direction of components: Eastward Water Velocity and Northward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-197.7 198.0" scaling="linear"/>
+                <variable id="water_u_bottom:water_v_bottom-mag" title="Magnitude of sea water velocity at bottom" description="Magnitude of components: Eastward Water Velocity and Northward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.03282 0.6893" scaling="linear"/>
+                <variable id="salinity_bottom" title="Salinity" description="Salinity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="11.02 39.48" scaling="linear"/>
+                <variable id="water_u" title="Eastward Water Velocity" description="Eastward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.666 2.631" scaling="linear"/>
+                <variable id="water_u:water_v-mag" title="Magnitude of sea water velocity" description="Magnitude of components: Eastward Water Velocity and Northward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.1193 2.571" scaling="linear"/>
+                <variable id="water_u:water_v-group" title="sea_water_velocity" description="Vector fields for sea_water_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.1193 2.571" scaling="linear"/>
+                <variable id="water_v" title="Northward Water Velocity" description="Northward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-2.13 1.712" scaling="linear"/>
+                <variable id="water_temp" title="Water Temperature" description="Water Temperature" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="12.75 34.66" scaling="linear"/>
+                <variable id="water_u:water_v-dir" title="Direction of sea water velocity" description="Direction of components: Eastward Water Velocity and Northward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-197.9 198.0" scaling="linear"/>
+                <variable id="surf_el" title="Water Surface Elevation" description="Water Surface Elevation" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.074 0.8484" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="SST" title="SST" location="/data/gandalf/ncwms/latest_SST.nc" queryable="true" downloadable="false" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="sst" title="sst" palette="x-Sst" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="25.0 35.0" scaling="linear"/>
+                <variable id="unmasked_sst" title="unmasked_sst" palette="x-Sst" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="25.0 35.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="DAC_RTOFS" title="DAC_RTOFS" location="/data/gandalf/ncwms/rutgers/*.nc" queryable="true" downloadable="false" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="360">
+            <variables>
+                <variable id="v_depth_avg" title="v_depth_avg" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="true" colorScaleRange="-0.5631 1.042" scaling="linear"/>
+                <variable id="u_depth_avg" title="u_depth_avg" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="true" colorScaleRange="-0.5342 0.514" scaling="linear"/>
+                <variable id="mag_depth_avg" title="mag_depth_avg" palette="x-Rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="true" colorScaleRange="-0.04398 1.037" scaling="linear"/>
+                <variable id="dir_depth_avg" title="dir_depth_avg" palette="x-Rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-12.6 369.6" scaling="linear"/>
+            </variables>
+        </dataset>
+    </datasets>
+    <cache enabled="false">
+        <inMemorySizeMB>512</inMemorySizeMB>
+        <elementLifetimeMinutes>0.0</elementLifetimeMinutes>
+    </cache>
+    <dynamicServices/>
+    <dynamicCache enabled="false">
+        <numberOfDatasets>10</numberOfDatasets>
+        <elementLifetimeMinutes>0.0</elementLifetimeMinutes>
+    </dynamicCache>
+    <contact>
+        <name>Robert Currier</name>
+        <organization></organization>
+        <telephone>19794366423</telephone>
+        <email>robertdcurrier@gmail.com</email>
+    </contact>
+    <server>
+        <title>ncWMS Server</title>
+        <allowFeatureInfo>true</allowFeatureInfo>
+        <maxImageWidth>1024</maxImageWidth>
+        <maxImageHeight>1024</maxImageHeight>
+        <abstract></abstract>
+        <keywords></keywords>
+        <url></url>
+        <allowglobalcapabilities>true</allowglobalcapabilities>
+    </server>
+    <crsCodes/>
+</config>

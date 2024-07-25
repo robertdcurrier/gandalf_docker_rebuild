@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div id='map'>
+    {% include "gMenu.html" %}
+    {% autoescape on %}
+    <script>
+      var deployed = 0;
+      var map = initMap();
+      displayFeatures({{allCollections}}, map, deployed);
+    </script>
+    {% endautoescape %}
+  </div>
+{% endblock %}

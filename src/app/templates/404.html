@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="not-found jumbotron">
+    <h2>404: Page Not Found</h2>
+    <p>Sorry, the monkeys are very confused by your request!</p>
+    <img src="{{ request.url_root}}/static/images/confused_monkey.jpg">
+</div>
+{% endblock %}

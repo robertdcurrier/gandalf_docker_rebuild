@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+{% autoescape on %}
+  {% include 'publicNav.html' %}
+    <div id='new-dash'>
+      {% include 'deployDash.html' %}
+    </div>
+<div id='gLayers'>
+  <ul class="list-group">
+    {% include 'gLayers.html' %}
+   </ul>
+</div>
+<div id='plotWrapper'>
+  <img src='/static/images/red_close.png' id='closePlot'></img>
+</div>
+<div id='plotWrapper3D'>
+  <img src='/static/images/red_close.png' id='closePlot3D'></img>
+  <div id='plotLoadingSpinner'><img src='/static/images/spinner.gif'></div>
+</div>
+
+<div id='ais_map'>
+    <script> 
+        var latitude="26.0";
+        var longitude="-88.0";
+        var zoom="6";   
+        var fleet="5c1d509d5199afbbabc42c87c8a8ecc3";
+        var fleet_name="Default Fleet";
+      </script>
+  <script type="text/javascript" src="https://www.vesselfinder.com/aismap.js"></script>
+</div>
+
+<div id='map'>
+  <div id='layerControl'>
+    <img src='/static/images/layers_small.png' id='layerControl'></img>
+  </div>
+  {% if current_user.is_authenticated %}
+  <script>
+    var map_center = {{ current_user.map_center }};
+    var map_zoom = {{ current_user.map_zoom }};
+    initGANDALF(map_center, map_zoom);
+  </script>
+  {% else %}
+  <script>
+      var map_center = [37, -96];
+      var map_zoom = 4;
+      initGANDALF(map_center, map_zoom);
+  </script>
+  {% endif %}
+  <div id='wmsLegend'></div>
+</div>
+{% endautoescape %}
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+{% include "publicNav.html" %}
+<div class="container-fluid">
+  <div class="row"><!-- Row 1 -->
+    <div class="col-lg-4">
+      <div class="team-member-box">
+        <img src="/static/images/jorge_brenner_mug.png"></>
+        <div class="team-member-caption">
+          <a href="mailto:jorge.brenner@gcoos.org">Dr. Jorge Brenner</a>
+        </div>
+        <div class="team-member-caption-sub">GCOOS Executive Director</div>
+      </div>
+    </div><!-- End Col 1 -->
+    <div class="col-lg-4">
+      <div class="team-member-box">
+        <img src="/static/images/codemonkey_team.png"></>
+        <div class="team-member-caption">
+          <a href="mailto:bob.currier@gcoos.org">Bob Currier</a>
+        </div>
+        <div class="team-member-caption-sub">Data Scientist/Product Developer</div>
+
+      </div>
+    </div><!-- End Col 2 -->
+    <div class="col-lg-4">
+      <div class="team-member-box">
+        <img src="/static/images/matt_howard.png"></>
+        <div class="team-member-caption">Matt Howard</div>
+        <div class="team-member-caption-sub">In Memoriam</div>
+      </div>
+    </div><!-- End Col 3 -->
+  </div><!-- End Row 1 -->
+ </div><!-- End container -->
+{% endblock %}

@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media screen and (max-width: 900px) {
+  /*** phones***/
+  .main-nav ul li a{ padding:14px;}
+  .login-box {
+    background-color: #FFFFFF;
+    font-family: Arial;
+    text-align: center;
+    border: 2px solid black;
+    width: 300px;
+    height:300px;
+    color: red;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding-bottom: 10px;
+  }
+  /*** Don't show dash or layers on small screens ***/
+  #new-dash {
+    display: none;
+    visibility: hidden;
+  }
+
+  #gLayers {
+    display: none;
+    visibility: hidden;
+  }
+
+  #layerControl {
+    display: none;
+    visibility: hidden;
+  }
+
+  .summary_box {
+    display: none;
+    visibility: hidden;
+  }
+  #wgLegend  {
+    width: 80%;
+  }
+  #wgLegend img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1500px) {
+	/*** laptop small ***/
+	.main-nav ul li a{ padding:10px;}
+	.small-logo{ padding:0 20px;}
+        .splash h1{
+        font-family: 'Montserrat',sans-serif;
+        font-size:75px;
+        font-weight:400;
+        letter-spacing: -1px;
+        margin:0 0 22px 0 ;
+        color: white;
+        }
+
+	.th_dash {
+		font-size: .7em;
+	}
+	.td_dash {
+		font-size: .6em;
+                height: 5px;
+	}
+	.td_good_date {
+		font-size: .6em;
+	}
+	.td_warn_date {
+		font-size: .6em;
+	}
+	.td_crit_date{
+		font-size: .6em;
+	}
+}
+
+@media screen and (min-width: 1501px) {
+	/*** Big ass screens ***/
+	.main-nav ul li a{ padding:14px;}
+	.small-logo{ padding:0 20px;}
+        .splash h1{
+        font-family: 'Montserrat',sans-serif;
+        font-size:100px;
+        font-weight:400;
+        letter-spacing: -1px;
+        margin:0 0 22px 0 ;
+        color: white;
+        }
+	.th_dash {
+		font-size: 1em;
+	}
+	.td_dash {
+		font-size: .6em;
+	}
+	.td_good_date {
+		font-size: .6em;
+	}
+	.td_warn_date {
+		font-size: .6em;
+	}
+	.td_crit_date{
+		font-size: .8em;
+	}
+}

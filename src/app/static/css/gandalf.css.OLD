@@ -1,0 +1,779 @@
+.grid-block, .main, .post, .comments li, .comment-form {
+background: #fff;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+padding: 10px;
+margin-bottom: 10px;
+-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
+/* Local Overrides of Bootstrap.css */
+#windyty {
+  height: 100%; width: 100%;
+  margin-left: auto; margin-right: auto;
+  position: relative;
+}
+
+#myCharts {
+  height: 100%; width: 100%;
+  margin-top: 50px;
+  }
+
+#depthWidget {
+  position: absolute;
+  right: 3px;
+  top: 5px;
+  width: 200px;
+  height: 150px;
+  text-align: right;
+  z-index: 500;
+}
+
+#layersWidget {
+  position: absolute;
+  right: 3px;
+  top: 5px;
+  width: 175px;
+  height: 150px;
+  text-align: right;
+  z-index: 500;
+}
+
+.topOfMap {
+ width: 100px;
+ height: 100px;
+ position: relative;
+ z-index: 10000;
+ background-color: white;
+}
+
+body {
+width: 100%;
+height: 100%;
+}
+
+.dropdown-header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container {
+width: 100%;
+height: 100%;
+padding-left: 2px;
+padding-right: 2px;
+/* temporarily enabled while we are working with autoforms */
+}
+
+#main  {
+  height: 100%;
+  overflow: hidden;
+}
+
+.navbar .gMenu > a:visited {
+  color: white;
+}
+
+.navbar {
+background-color: black;
+color: white;
+margin-bottom: 0px;
+}
+
+.navbar-inverse .navbar-brand {
+  font-size: 1.25em;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: goldenrod;
+  background-color: transparent;
+}
+.navbar-inverse .navbar-brand:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-inverse .navbar-brand a:hover {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #dfdfdf;
+}
+
+.navbar-default .navbar-right > li > a {
+  color: #dfdfdf;
+  margin-right: 10px;
+}
+
+.navbar-default .navbar-nav > li > a:visited {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: goldenrod;
+}
+
+.navbar-fixed-top {
+  height: 50px;
+  z-index: 5000
+  color: white;
+}
+
+
+.btn {
+  border: 1px solid red;
+  color: white;
+  background-color: black;
+  vertical-align: middle;
+}
+
+.btn.btn-warning.navbar-btn {
+  color: black;
+  font-size: 12pt;
+}
+
+.btn.btn-warning.navbar-btn:hover {
+  color: white;
+}
+
+.dropdown-toggle {
+  font-size: 12pt;
+  color: black;
+}
+
+
+html {
+  background: #eee;
+  height: 100%;
+  width: 100%;
+}
+
+.form {
+  background: #eee;
+  overflow: scroll;
+}
+.jumbotron {
+  background: #ffffff;
+}
+
+/* End Overrides */
+
+/* Custom CSS */
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+
+.thDelete {
+  color: red;
+}
+.thEdit {
+  color: orange;
+}
+
+.table-wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 65px;
+  font-size: 14px;
+  font-weight: 200;
+  text-align: center;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.spacer {
+  width: 100%;
+  height: 5px;
+}
+
+.banner-subTitle {
+  font-family: "Montserrat";
+  font-size: .45em;
+  font-style: italic font-family: "Montserrat";
+  color: white;
+  text-align: center;
+}
+
+.banner {
+  background-image: url("/gandalf/static/images/gcoos_header.jpg");
+  background-size: 100%;
+  height: 100px;
+  font-family: "Montserrat";
+  font-size: 3.3em;
+  color: #fff;
+  text-align: center;
+}
+
+#deleteMe {
+  color: red;
+}
+
+#map {
+  position: fixed
+  top:61;
+  width:100%;
+  height:100%;;
+}
+
+.titleBar {
+  width: 100%;
+  margin-top: 1px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  font-family: "Montserrat";
+  font-size: 1em;
+  color: #dfdfdf;
+  text-align: center;
+}
+
+.footer {
+  height: 10%;
+  font-size: .75em;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.navbar .navbar-nav .navbar-right {
+padding-right: 10px;
+}
+
+/* End Custom */
+
+/* line 32, ../sass/style.scss */
+.navbar .navbar-inner {
+-webkit-border-radius: 0px 0px 3px 3px;
+-moz-border-radius: 0px 0px 3px 3px;
+-ms-border-radius: 0px 0px 3px 3px;
+-o-border-radius: 0px 0px 3px 3px;
+border-radius: 0px 0px 3px 3px; }
+#spinner {
+height: 300px; }
+.post {
+/* For modern browsers */
+/* For IE 6/7 (trigger hasLayout) */
+*zoom: 1;
+position: relative;
+opacity: 1; }
+.post:before, .post:after {
+content: "";
+display: table; }
+.post:after {
+clear: both; }
+.post.invisible {
+opacity: 0; }
+.post.instant {
+-webkit-transition: none;
+-moz-transition: none;
+-o-transition: none;
+transition: none; }
+.post.animate{
+-webkit-transition: all 300ms 0ms;
+-webkit-transition-delay: ease-in;
+-moz-transition: all 300ms 0ms ease-in;
+-o-transition: all 300ms 0ms ease-in;
+transition: all 300ms 0ms ease-in; }
+.post .upvote {
+display: block;
+margin: 7px 12px 0 0;
+float: left; }
+.post .post-content {
+float: left; }
+.post .post-content h3 {
+margin: 0;
+line-height: 1.4;
+font-size: 14px; }
+.post .post-content h3 a {
+display: inline-block;
+margin-right: 5px; }
+.post .post-content h3 span {
+font-weight: normal;
+font-size: 14px;
+display: inline-block;
+color: #aaaaaa; }
+.post .post-content p {
+margin: 0; }
+.post .discuss {
+display: block;
+float: right;
+margin-top: 7px; }
+.comments {
+list-style-type: none;
+margin: 0; }
+.comments li h4 {
+font-size: 16px;
+margin: 0; }
+.comments li h4 .date {
+font-size: 12px;
+font-weight: normal; }
+.comments li h4 a {
+font-size: 12px; }
+.comments li p:last-child {
+margin-bottom: 0; }
+.dropdown-menu span {
+display: block;
+padding: 3px 20px;
+clear: both;
+line-height: 20px;
+color: #bbb;
+white-space: nowrap; }
+.load-more {
+display: block;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+background: rgba(0, 0, 0, 0.05);
+text-align: center;
+height: 60px;
+line-height: 60px;
+margin-bottom: 10px; }
+.load-more:hover {
+text-decoration: none;
+background: rgba(0, 0, 0, 0.1); }
+.posts .spinner-container{
+position: relative;
+height: 100px;
+}
+.jumbotron{
+text-align: center;
+}
+.jumbotron h2{
+font-size: 60px;
+font-weight: 100;
+}
+@-webkit-keyframes fadeOut {
+0% {opacity: 0;}
+10% {opacity: 1;}
+90% {opacity: 1;}
+100% {opacity: 0;}
+}
+@keyframes fadeOut {
+0% {opacity: 0;}
+10% {opacity: 1;}
+90% {opacity: 1;}
+100% {opacity: 0;}
+}
+.errors{
+position: fixed;
+z-index: 10000;
+padding: 10px;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+pointer-events: none;
+}
+.alert {
+animation: fadeOut 2700ms ease-in 0s 1 forwards;
+-webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+-moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+width: 250px;
+float: right;
+clear: both;
+margin-bottom: 5px;
+pointer-events: auto;
+}
+
+
+.form-signin
+{
+    max-width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+.iconColorGreen {background-color: white; color: green; border: 0px; text-align: center;}
+.iconColorRed {background-color: white; color: red; border: 0px; text-align: center;}
+.iconColorRed > a:link {color:#FF0000;}
+.iconColorRed > a:visited {color:#FF0000;}
+.iconColorGreen > a:link {color:#00FF00;}
+.iconColorGreen > a:visited {color:#00FF00;}
+
+.infoBoxHeading {
+ font-size: 2em;
+ font-weight: 600;
+ text-align: center;
+ font-family: "Montserrat";
+ }
+
+.infoBoxTable {
+  margin: 0 auto;
+  background-color: white;
+  width: 80%
+  font-family: "Montserrat";
+}
+
+.td_infoBoxSensor {
+  font-style: bold;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
+  width: 30%;
+  text-align: left;
+  padding-right: 5px;
+}
+
+.td_infoBoxData {
+  font-style: bold;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  font-weight: 400;
+  width: 70%;
+  text-align: left;
+  padding-right: 5px;
+}
+
+.leaflet-popup {
+  width: 350px;
+}
+
+.leaflet-container {
+  background-color:rgba(255,0,0,0.0);
+}
+
+.leaflet-top {
+  padding-top: 300px;
+}
+
+.layer-title {
+  position: relative;
+  font-family: "Montserrat";
+  font-size: 1.25em;
+  color: white;
+}
+
+.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.layer-item {
+  font-family: "Montserrat";
+  font-size: 1em;
+}
+
+.depth-header {
+  font-family: "Montserrat";
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.layer-header {
+  font-family: "Montserrat";
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.error_mess {
+  color: red;
+  font-size 12px;
+  text-align: enter;
+  font-weight: bold;
+}
+
+.banner-image-left {
+  opacity: .8;
+  float: left;
+  position: absolute;
+  z-index: 1;
+  margin-left: auto;
+  width: 100px;
+  height: 100px;
+}
+
+
+th {
+  text-align: center;
+  border: 1px solid white;
+  color: #ffffff;
+  padding: 10px;
+  margin-top:5px;
+  margin-bottom:5px;
+  background-color: #3399ff;
+  font-size: 1em;
+}
+
+td {
+  font-size: .9em;
+  color: black;
+}
+
+.logo {
+  position: fixed !important;
+  bottom: 10px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.glyphicon {
+  font-size: 25px;
+  padding-top: 10px;
+  margin-right: 25px;
+}
+
+#dash-button {
+  color: white;
+  background-color: black;
+  position: relative;
+}
+
+#gDepths {
+  display: none;
+  background-color: white;
+  position: fixed;
+  top: 75px;
+  right: 50px;
+  color: black;
+  overflow-y: scroll;
+  height: 600px;
+  width: 100px;
+  z-index: 26;
+}
+
+#gLayers {
+  display: none;
+  position: fixed;
+  background-color: gray;
+  top: 50px;
+  right: 0px;
+  color: black;
+  overflow-y: scroll;
+  height: 90%;
+  z-index: 26;
+}
+
+.gNav-item {
+  font-family: "Montserrat";
+  font-size: 1.5em;
+  color: white;
+  padding: 5px;
+  background: black;
+  border: 1px solid yellow;
+  padding-top: 10px;
+}
+
+#new-dash {
+  font-family: "Montserrat";
+  width: 100%;
+  position: fixed;
+  top: 51px;
+  z-index: 26;
+  font-size: 1em;
+  color: black;
+  text-align: center;
+}
+
+#g-slider-box {
+  display: none;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 1.5em;
+  position: fixed;
+  bottom: 0px;
+  background-color: black;
+  color: white;
+  height: 50px;
+  width: 100%;
+  z-index: 26;
+  text-align: center;
+}
+
+#legend {
+  position: fixed !important;
+  bottom: 50px !important;
+  right: 5px !important;
+  margin-right: 5px !important;
+}
+
+.gTitle {
+  font-family: "Montserrat";
+  font-size: 3em;
+ }
+
+.g-slider-box {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 1.5em;
+  position: fixed;
+  bottom: 0px;
+  background-color: black;
+  color: white;
+  height: 50px;
+  width: 100%;
+  z-index: 25;
+  text-align: center;
+};
+
+.auvMap {
+  float: left;
+  width: 100%;
+  margin-top: 1px;
+  height: 600px;
+  background-color: white;
+  display: none;
+}
+
+.dashboard {
+  width: 100%;
+  margin-top: 0px;
+  background-color: white;
+  display: block;
+  position: relative;
+}
+
+.dashboardTable {
+  background-color: white;
+  width: 100%;
+}
+.appsWrapper {
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(253,245,230);
+  display: none;
+  overflow: hidden;
+}
+.contentTitle {
+  width:  100%;
+  text-align: center;
+  height: 25px;
+  background-color: rgb(0,0,100);
+  color: white;
+  font-size: 1.2em;
+}
+.text-labels {
+  border: 1px solid red;
+  font-size: .7em;
+  font-weight: 300;
+  /* Use color, background, set margins for offset, etc */
+}
+.td_good_date {text-align: center; background-color: #66FF33; color: black; border: 1px solid black;}
+.td_alert_date {background-color: #FFFF00; color: black; border: 1px solid black;}
+.td_warn_date {background-color: #FFA500; color: black; border: 1px solid black;}
+.td_crit_date {background-color: #FF0000; color: black; border: 1px solid black;}
+.td_dash {text-align: center; font-size: 1em; background-color: rgb(253,245,230); border: 1px solid black;}
+.tr_dash {font-size: 1em; background-color: rgb(253,245,230);}
+.td_plots {text-align: center; width: 25px; font-size: 1em; background-color: rgb(253,245,230); border: 1px solid black;}
+.td_glyph {background-color: white; border: 0px; text-align: center;}
+.td_good {cursor: pointer; background-color: #66FF33; color: black; border: 2px solid blue;}
+.td_alert {cursor: pointer; background-color: #FFFF00; color: black; border: 2px solid blue;}
+.td_warn {cursor: pointer; background-color: #FFA500; color: black; border: 2px solid blue;}
+.td_crit {cursor: pointer; background-color: #FF0000; color: black; border: 2px solid blue;}
+
+.my-label {
+    position: absolute;
+    width:100px;
+    font-size: .2em;
+}
+
+.opacity-slider {
+  width: 100%;
+  height: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #E0EEEE;
+  text: white;
+  font-size: .3em;
+}
+.opacity-slider .handle {
+  position:absolute;
+  background:#404040;
+  width:15px;
+  height:8px;
+  border-radius:1px;
+  cursor:pointer;
+  cursor:ns-resize;
+  }
+.opacity-slider  .handle:hover {
+  background:red;
+}

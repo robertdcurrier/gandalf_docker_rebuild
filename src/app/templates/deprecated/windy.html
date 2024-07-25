@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "windy_layout.html" %}
+{% block content %}
+{% autoescape on %}
+  {% include 'publicNav.html' %}
+<div id='new-dash'>
+    {% include "dashboard.html" %}
+</div>
+<div id='gLayers'>
+  <ul class="list-group">
+    {% include 'gLayers.html' %}
+   </ul>
+</div>
+<div id='map'>
+</div>
+<div id='windy'>
+  <script>
+    initMaps();
+  </script>
+</div>
+{% endautoescape %}
+{% endblock %}

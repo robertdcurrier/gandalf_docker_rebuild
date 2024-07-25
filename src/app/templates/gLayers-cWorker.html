@@ -1,0 +1,160 @@
+<!--
+2021-09-28
+Began work on building collapsing layer menu with categories. Have been
+tinkering with this for some time but really need to get serious and
+make this work. We're getting far too many layers to display at one time.
+  -->
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapseCW">USM Hypoxia ASV</a>
+        </h4>
+      </div>
+      <div id="collapseCW" class="panel-collapse collapse">
+        <a class="list-group-item">
+           <label><input type="checkbox" name="cworker" id="cworker_track" checked
+            class="list-group-item-text">  Vessel Track</input></label><br>
+          <label><input type="radio" name="cworker_sensors" id="cw_none"
+            class="list-group-item-text">  No Markers</input></label><br>
+          <label><input type="radio" name="cworker_sensors" id="cw_temp" checked
+            class="list-group-item-text">Sea Water Temperature</input></label><br>
+          <label><input type="radio" name="cworker_sensors" id="cw_psal"
+            class="list-group-item-text">Practical Salinity</input></label><br>
+          <label><input type="radio" name="cworker_sensors" id="cw_oxy"
+            class="list-group-item-text">O2 Saturation</input></label><br>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse2">Navigation</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+        <ul class="list-group">
+	<li class="list-group-item">Depths
+            <input  type='range' min='0' max='1' step='.01' value='0'
+              onmousemove="layerOpacity(layersNS.noaaDepthsLayer,this.value)">
+            </input>
+        </li>
+	<li class="list-group-item">Buoys and Beacons
+            <input  type='range' min='0' max='1' step='.01' value='0'
+              onmousemove="layerOpacity(layersNS.noaaBuoysLayer,this.value)">
+            </input>
+        </li>
+  <li class="list-group-item">Platforms
+          <input  type='range' min='0' max='1' step='.01' value='0'
+            onmousemove="layerOpacity(layersNS.oceanPlatformsLayer,this.value)">
+          </input>
+        </li>
+        <li class="list-group-item">World EEZ
+            <input  type='range' min='0' max='1' step='.01' value='0'
+              onmousemove="layerOpacity(layersNS.eezLayer,this.value)">
+            </input>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#hydro1">Hydrography</a>
+        </h4>
+      </div>
+
+      <div id="hydro1" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">GEBCO Grid 2022
+            <input  type='range' min='0' max='1' step='.01' value='0'
+              onmousemove="layerOpacity(layersNS.gebcoGridLayer,this.value)">
+            </input>
+          </li>
+        </ul>
+        <ul class="list-group">
+          <li class="list-group-item">NOAA Surveys with BAGs
+            <input  type='range' min='0' max='1' step='.01' value='0'
+              onmousemove="layerOpacity(layersNS.noaaBagServerLayer,this.value)">
+            </input>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse3">Models</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">HYCOM
+            <input  type='range' min='0' max='1' step='.01' value='0'
+              onmousemove="layerOpacity(layersNS.hycomLayer,this.value)">
+            </input>
+          </li>
+            <li class="list-group-item">HYCOM Depth
+              <div id='depthWindow'></div>
+              <input  type='range' min='0' max='19' step='1' value='0' id='hycomDepth'
+                onchange="layerDepth(this.value)">
+                </input>
+            </li>
+          <li class="list-group-item">AOML Geostrophic
+            <input  type='range' min='0' max='1' step='.01' value='0'
+              onmousemove="layerOpacity(layersNS.geostrophicLayer,this.value)">
+            </input>
+        </li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse5">Satellite and Radar</a>
+      </h4>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse">
+      <ul class="list-group">
+        <li class="list-group-item">HF Radar 6km
+            <input  type='range' min='0' max='1' step='.01' value='0'
+              onmousemove="layerOpacity(layersNS.hfrLayer6K,this.value)">
+            </input>
+        </li>
+        <li class="list-group-item">NOAA NEXRAD
+          <input type='range' min='0' max='1' step='.01' value='0'
+              onmousemove="layerOpacity(layersNS.noaaNexrad,this.value)">
+          </input>
+        </li>
+        <li class="list-group-item">GOES East
+          <input type='range' min='0' max='1' step='.01' value='0'
+             onmousemove="layerOpacity(layersNS.goesVisLayer,this.value)">
+          </input></li>
+          <li class="list-group-item">MODIS SST
+           <input type='range' min='0' max='1' step='.01' value='0'
+             onmousemove="layerOpacity(SSTLayer,this.value)">
+           </input>
+         </li>
+         <li class="list-group-item">MODIS Chlorophyll
+           <input type='range' min='0' max='1' step='.01' value='0'
+             onmousemove="layerOpacity(gibsMODIS1,this.value);
+             layerOpacity(gibsMODIS2,this.value);layerOpacity(gibsMODIS3,this.value)">
+         </input></li>
+      </ul>
+    </div>
+  </div>
+</div>

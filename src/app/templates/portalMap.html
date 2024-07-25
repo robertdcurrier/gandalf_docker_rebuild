@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+{% autoescape on %}
+  {% include 'publicNav.html' %}
+<div id='new-dash'>
+    {% include "portalMapDash.html" %}
+</div>
+<div id='plotWrapper'>
+  <img src='/static/images/red_close.png' id='closePlot'></img>
+  <div id='plotHolder'>
+  </div>
+</div>
+<div id='portalMap'>
+</div>
+  <script>
+    initPortalMap("{{vehicle_type}}", "{{ json_file }}");
+  </script>
+</div>
+{% endautoescape %}
+{% endblock %}
